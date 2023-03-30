@@ -3,17 +3,20 @@
   top: 0;
   left: 0;
   width: 100%;
-  color: black;
+  padding: 0 20px;
+  color: #222;
   background-color: white;
+  z-index: 999;
 }
 .navDesktop .flex {
   width: 100%;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .navDesktop .logo {
-  width: 150px;
+  width: 200px;
   position: relative;
 }
 .navDesktop .logoImg {
@@ -21,38 +24,62 @@
   height: auto;
 }
 .navDesktop .link {
+  font-family: "Oswald", sans-serif;
+  font-weight: 900;
   display: inline-block;
   text-decoration: none;
   padding: 0 20px;
-  font-size: 1em;
+  font-size: 1.2em;
   cursor: pointer;
 }
+
+.title {
+  margin: 20px 0;
+}
+.title h3 {
+  font-size: 3rem;
+}
+
+.video {
+  position: relative;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video video {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.video .logo {
+  width: 500px;
+}
+.video .logo .img {
+  width: 100%;
+  height: auto;
+}
+
 .header {
-  padding: 5em 0;
   background-color: white;
 }
 .header .headerBox {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .header .left {
   text-align: left;
   width: 45%;
-}
-.header .title {
-  color: black;
-  font-weight: bold;
-  font-size: 1em;
-  font-family: "Oswald", sans-serif;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .header .text {
-  color: black;
+  color: #222;
   margin: 20px 0;
-  font-size: 1.3em;
-  font-family: "Oswald", sans-serif;
+  font-size: 1.2em;
 }
 .header .right {
+  margin-top: -100px;
   width: 55%;
   padding: 20px;
 }
@@ -66,7 +93,8 @@
 
 .servicios {
   position: relative;
-  padding: 5em 0;
+  padding: 200px 0 100px 0;
+  background-color: black;
 }
 .servicios .bg {
   position: absolute;
@@ -75,9 +103,14 @@
   top: 0;
   left: 0;
   background-image: url(/img/servicios.png);
-  background-position: center;
+  background-position: top;
   background-size: cover;
-  z-index: 0;
+  z-index: 1;
+  transition-duration: 0.2s;
+}
+.servicios .bg.active {
+  opacity: 0;
+  transition-duration: 0.2s;
 }
 .servicios .overlay {
   position: absolute;
@@ -85,26 +118,57 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transition-duration: 0.2s;
+}
+.servicios .overlay.active {
+  background-color: rgba(0, 0, 0, 0.3);
+  transition-duration: 0.2s;
 }
 .servicios .content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   padding-top: 150px;
   text-align: center;
   color: white;
 }
 .servicios .text {
   text-align: left;
-  font-size: 2em;
 }
+.servicios .text .servicio {
+  font-family: "Oswald", sans-serif;
+  display: inline-block;
+  font-weight: 600;
+  text-align: left;
+  font-size: 2.4em;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.servicios .text .servicio:hover {
+  color: rgba(255, 255, 255, 0.6);
+  transition-duration: 0.2s;
+}
+.servicios .videos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+.servicios .videos video {
+  display: none;
+}
+.servicios .videos .active {
+  width: 100%;
+  display: block;
+}
+
 .home {
   background-color: white;
-}
-.home .title {
-  font-size: 3em;
-  padding: 20px;
+  padding: 100px 0;
 }
 .home .clientes {
   display: grid;
@@ -114,18 +178,23 @@
   width: 100%;
   height: auto;
 }
+
 .contacto {
   background-color: white;
 }
 .contactanos {
   display: flex;
-  justify-content: space-between;
 }
-.contactanos .form {
+.contactanos .left {
+  width: 50%;
+}
+.contactanos .right {
+  width: 50%;
   padding: 20px;
-  width: 120%;
-  border-radius: 10px;
-  text-align: center;
+}
+.contactanos label {
+  font-size: 2rem;
+  font-weight: 600;
 }
 .contactanos input {
   display: block;
@@ -137,11 +206,75 @@
   color: red;
 }
 .contactanos label {
+  display: block;
   color: black;
   font-size: 1em;
-  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.contactanos input {
+  width: 100%;
+  border: 1px solid #222;
+  padding: 10px;
+}
+.contactanos textarea {
+  width: 100%;
+  border: 1px solid #222;
+  padding: 10px;
+  height: 200px;
 }
 .contactanos .left img {
-  width: 600px;
-  height: 700px;
+  width: 100%;
+  height: auto;
+}
+.contactanos button {
+  width: 100%;
+  margin: 10px 0;
+  background-color: #222;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  font-size: 1.2rem;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+.footer .left {
+}
+.footer .right {
+  text-align: right;
+  display: flex;
+  column-gap: 10px;
+}
+.footer .right .puesto {
+  padding: 20px;
+}
+.footer .logo {
+  width: 200px;
+  position: relative;
+}
+.footer .logoImg {
+  width: 100%;
+  height: auto;
+}
+.footer .slogan {
+  font-size: 1.2em;
+  font-family: "Oswald", sans-serif;
+}
+.footer .puesto {
+  text-align: right;
+  font-size: 1.2em;
+  font-family: "Oswald", sans-serif;
+  padding-top: 30px;
+}
+footer .contacto {
+  font-size: 1.5em;
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
 }

@@ -3,10 +3,41 @@ import Image from "next/image";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { useRef } from "react";
 
 export default function Home() {
+  const serviciosOverlayRef = useRef();
+  const serviciosBgRef = useRef();
+  const video1 = useRef();
+  const video2 = useRef();
+  const video3 = useRef();
+  const video4 = useRef();
+  const video5 = useRef();
+  const video6 = useRef();
+
+  const serviciosHoverInHandler = (videoRef) => {
+    serviciosOverlayRef.current.classList.add(styles.active);
+    serviciosBgRef.current.classList.add(styles.active);
+    videoRef === "1" && video1.current.classList.add(styles.active);
+    videoRef === "2" && video2.current.classList.add(styles.active);
+    videoRef === "3" && video3.current.classList.add(styles.active);
+    videoRef === "4" && video4.current.classList.add(styles.active);
+    videoRef === "5" && video5.current.classList.add(styles.active);
+    videoRef === "6" && video6.current.classList.add(styles.active);
+  };
+  const serviciosHoverOutHandler = (videoRef) => {
+    serviciosOverlayRef.current.classList.remove(styles.active);
+    serviciosBgRef.current.classList.remove(styles.active);
+    videoRef === "1" && video1.current.classList.remove(styles.active);
+    videoRef === "2" && video2.current.classList.remove(styles.active);
+    videoRef === "3" && video3.current.classList.remove(styles.active);
+    videoRef === "4" && video4.current.classList.remove(styles.active);
+    videoRef === "5" && video5.current.classList.remove(styles.active);
+    videoRef === "6" && video6.current.classList.remove(styles.active);
+  };
+  const goToSection = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <Head>
@@ -17,41 +48,53 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <nav className={styles.navDesktop}>
-          <div className="container">
-            <div className={styles.flex}>
-              <div className={styles.left}>
-                <Link href="/">
-                  <div className={styles.logo}>
-                    <Image
-                      src="/img/logo_2.png"
-                      alt="island"
-                      className={styles.logoImg}
-                      width={1612}
-                      height={213}
-                    />
-                  </div>
-                </Link>
-              </div>
-              <div className={styles.right}>
-                <div className={styles.link}>NOSOTROS</div>
-                <div className={styles.link}>SERVICIOS</div>
-                <div className={styles.link}>NUESTRO CAMINO</div>
-                <div className={styles.link}>CONTÁCTANOS</div>
-              </div>
+          <div className={styles.flex}>
+            <div className={styles.left}>
+              <Link href="/">
+                <div className={styles.logo}>
+                  <Image
+                    src="/img/logo_2.png"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1612}
+                    height={213}
+                  />
+                </div>
+              </Link>
+            </div>
+            <div className={styles.right}>
+              <div className={styles.link}>NOSOTROS</div>
+              <div className={styles.link}>SERVICIOS</div>
+              <div className={styles.link}>NUESTRO CAMINO</div>
+              <div className={styles.link}>CONTÁCTANOS</div>
             </div>
           </div>
         </nav>
-        <div className={styles.header}>
+        <section className={styles.video}>
+          <video autoPlay muted>
+            <source src="/img/header.mp4" type="video/mp4" />
+          </video>
+          <div className={styles.logo}>
+            <Image
+              src="/img/logo-1.png"
+              alt="island"
+              className={styles.img}
+              width={1612}
+              height={213}
+            />
+          </div>
+        </section>
+        <section className={styles.header}>
           <div className="container">
             <div className={styles.headerBox}>
               <div className={styles.left}>
-                <div className={styles.title}>
-                  <h1>
-                    Somos una agencia creativa, digital y de marketing que
-                    colabora con clientes de México, Estados Unidos y Canada.
-                  </h1>
-                </div>
                 <div className={styles.text}>
+                  <p>
+                    <b>
+                      Somos una agencia creativa, digital y de marketing que
+                      colabora con clientes de México, Estados Unidos y Canada.
+                    </b>
+                  </p>
                   <p>
                     Trabajamos de la mano con empresas que buscan llevar su
                     marca al siguiente nivel, con un enfoque orientado a
@@ -83,26 +126,89 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <section className={styles.servicios}>
-          <div className={styles.bg} />
-          <div className={styles.overlay} />
+          <div className={styles.videos}>
+            <video autoPlay muted ref={video1}>
+              <source src="/img/header.mp4" type="video/mp4" />
+            </video>
+            <video autoPlay muted ref={video2}>
+              <source src="/img/identidad.mp4" type="video/mp4" />
+            </video>
+            <video autoPlay muted ref={video3}>
+              <source src="/img/digital.mp4" type="video/mp4" />
+            </video>
+            <video autoPlay muted ref={video4}>
+              <source src="/img/web.mp4" type="video/mp4" />
+            </video>
+            <video autoPlay muted ref={video5}>
+              <source src="/img/eventos.mp4" type="video/mp4" />
+            </video>
+            <video autoPlay muted ref={video6}>
+              <source src="/img/multimedia.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div className={styles.bg} ref={serviciosBgRef} />
+          <div className={styles.overlay} ref={serviciosOverlayRef} />
           <div className={styles.content}>
             <div className="container">
               <div className={styles.text}>
-                <h4>Creatividad</h4>
-                <h4>Identidad de marca</h4>
-                <h4>Artes finales y adaptaciones</h4>
-                <h4>Páginas web</h4>
-                <h4>Eventos Multimedia</h4>
-                <h4> Planificación y compra de medios offline y online</h4>
+                <div
+                  className={styles.servicio}
+                  onMouseOver={() => serviciosHoverInHandler("1")}
+                  onMouseLeave={() => serviciosHoverOutHandler("1")}
+                >
+                  Creatividad
+                </div>
+                <br></br>
+                <div
+                  className={styles.servicio}
+                  onMouseOver={() => serviciosHoverInHandler("2")}
+                  onMouseLeave={() => serviciosHoverOutHandler("2")}
+                >
+                  Identidad de marca
+                </div>
+                <br></br>
+                <div
+                  className={styles.servicio}
+                  onMouseOver={() => serviciosHoverInHandler("3")}
+                  onMouseLeave={() => serviciosHoverOutHandler("3")}
+                >
+                  Artes finales y adaptaciones
+                </div>
+                <br></br>
+                <div
+                  className={styles.servicio}
+                  onMouseOver={() => serviciosHoverInHandler("4")}
+                  onMouseLeave={() => serviciosHoverOutHandler("4")}
+                >
+                  Páginas web
+                </div>
+                <br></br>
+                <div
+                  className={styles.servicio}
+                  onMouseOver={() => serviciosHoverInHandler("5")}
+                  onMouseLeave={() => serviciosHoverOutHandler("5")}
+                >
+                  Eventos Multimedia
+                </div>
+                <br></br>
+                <div
+                  className={styles.servicio}
+                  onMouseOver={() => serviciosHoverInHandler("6")}
+                  onMouseLeave={() => serviciosHoverOutHandler("6")}
+                >
+                  Planificación y compra de medios offline y online
+                </div>
               </div>
             </div>
           </div>
         </section>
-        <div className={styles.home}>
+        <section className={styles.home}>
           <div className="container">
-            <div className={styles.title}>NUESTRO CAMINO</div>
+            <div className={styles.title}>
+              <h3>NUESTRO CAMINO</h3>
+            </div>
             <div className={styles.clientes}>
               <div className={styles.cliente}>
                 <Image
@@ -286,28 +392,79 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-        <div className={styles.contacto}>
+        </section>
+        <section className={styles.contacto} id="contacto">
           <div className="container">
             <div className={styles.contactanos}>
               <div className={styles.left}>
                 <Image
-                  src="/img/contacto.png"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1612}
-                  height={213}
+                  src="/img/fondo-contacto.png"
+                  alt="Platicanos tu idea"
+                  className={styles.img}
+                  width={1921}
+                  height={2567}
                 />
               </div>
               <div className={styles.right}>
+                <div className={styles.title}>
+                  <h3>PLATÍCANOS TU IDEA</h3>
+                </div>
                 <div className={styles.form}>
                   <label>Nombre</label>
-                  <input type="text" name="name" placeholder="Nombre" />
+                  <input type="text" name="name" />
+                  <label>Email</label>
+                  <input type="text" name="name" />
+                  <label>Mensaje</label>
+                  <textarea></textarea>
+                  <button>ENVIAR</button>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+        <footer className={styles.footer}>
+          <div className={styles.left}>
+            <div className={styles.logo}>
+              <Image
+                src="/img/logo_2.png"
+                alt="island"
+                className={styles.logoImg}
+                width={1612}
+                height={213}
+              />
+            </div>
+            <div className={styles.slogan}>
+              <p>
+                <b>
+                  La mezcla la decide cada cliente, nosotros garantizamos un
+                  gran Long Island
+                </b>
+              </p>
+            </div>
+            <div
+              className={styles.contacto}
+              onClick={() => goToSection("contacto")}
+            >
+              Contáctanos
+            </div>
+          </div>
+          <div className={styles.right}>
+            <div className={styles.puesto}>
+              <p>Andrea Barba</p>
+              <p>Co- Founder</p>
+              <p>VP Planner</p>
+              <p>andrea@longisland.mx </p>
+              <p>5530348016</p>
+            </div>
+            <div className={styles.puesto}>
+              <p> Ignacio Tatto</p>
+              <p> Co-Founder</p>
+              <p>VP Creativo</p>
+              <p>tatto@longisland.mx</p>
+              <p>5543401299</p>
+            </div>
+          </div>
+        </footer>
       </main>
     </>
   );
