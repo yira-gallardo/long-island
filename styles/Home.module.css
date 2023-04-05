@@ -32,7 +32,18 @@
   font-size: 1.2em;
   cursor: pointer;
 }
-
+.whatsApp {
+  position: fixed;
+  top: 120px;
+  right: 20px;
+  background-color: #25d366;
+  z-index: 999;
+  padding: 10px;
+  border-radius: 50%;
+}
+.whatsApp svg {
+  fill: white;
+}
 .title {
   margin: 20px 0;
 }
@@ -102,7 +113,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-image: url(/img/servicios.png);
+  background-image: url(/img/servicios.jpg);
   background-position: top;
   background-size: cover;
   z-index: 1;
@@ -129,19 +140,13 @@
 .servicios .content {
   position: relative;
   z-index: 3;
-  padding-top: 150px;
   text-align: center;
   color: white;
 }
 .servicios .text {
   text-align: left;
-}
-.servicios .text .servicio {
   font-family: "Oswald", sans-serif;
-  display: inline-block;
-  font-weight: 600;
-  text-align: left;
-  font-size: 2.4em;
+  font-size: 1.8em;
   cursor: pointer;
   transition-duration: 0.2s;
 }

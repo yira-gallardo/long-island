@@ -1,0 +1,14 @@
+.planificacion .title {
+  font-size: 2em;
+  font-family: "Oswald", sans-serif;
+}
+.planificacion .subtitle {
+  font-size: 1.5em;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: "Oswald", sans-serif;
+}
+.planificacion .text p {
+  font-size: 1.2em;
+  font-family: "Oswald", sans-serif;
+}
