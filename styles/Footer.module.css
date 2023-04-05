@@ -1,0 +1,36 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+.footer .right {
+  text-align: right;
+  display: flex;
+  column-gap: 10px;
+}
+.footer .right .puesto {
+  padding: 20px;
+}
+.footer .logo {
+  width: 200px;
+  position: relative;
+}
+.footer .logoImg {
+  width: 100%;
+  height: auto;
+}
+.footer .slogan {
+  font-size: 1.2em;
+  font-family: "Oswald", sans-serif;
+}
+.footer .puesto {
+  text-align: right;
+  font-size: 1.2em;
+  font-family: "Oswald", sans-serif;
+  padding-top: 30px;
+}
+footer .contacto {
+  font-size: 1.5em;
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+}
