@@ -1,0 +1,11 @@
+.eventos .title {
+  font-size: 2em;
+}
+.eventos .subtitle {
+  font-size: 1.5em;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.eventos .text p {
+  font-size: 1.2em;
+}
