@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { useRef } from "react";
+import { Nav } from "@/components/Nav/Nav";
+import { Footer } from "@/components/Footer/Footer";
 
 export default function Home() {
   const serviciosOverlayRef = useRef();
@@ -47,46 +49,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <nav className={styles.navDesktop}>
-          <div className={styles.flex}>
-            <div className={styles.left}>
-              <Link href="/">
-                <div className={styles.logo}>
-                  <Image
-                    src="/img/logo_2.png"
-                    alt="island"
-                    className={styles.logoImg}
-                    width={1612}
-                    height={213}
-                  />
-                </div>
-              </Link>
-            </div>
-            <div className={styles.right}>
-              <div
-                className={styles.link}
-                onClick={() => goToSection("header")}
-              >
-                NOSOTROS
-              </div>
-              <div
-                className={styles.link}
-                onClick={() => goToSection("servicios")}
-              >
-                SERVICIOS
-              </div>
-              <div className={styles.link} onClick={() => goToSection("home")}>
-                NUESTRO CAMINO
-              </div>
-              <div
-                className={styles.link}
-                onClick={() => goToSection("contacto")}
-              >
-                CONTÁCTANOS
-              </div>
-            </div>
-          </div>
-        </nav>
+        <Nav />
         <div className={styles.whatsApp}>
           <a href="https://wa.me/525530348016" target="_blank" rel="noreferrer">
             <svg
@@ -465,49 +428,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <footer className={styles.footer}>
-          <div className={styles.left}>
-            <div className={styles.logo}>
-              <Image
-                src="/img/logo_2.png"
-                alt="island"
-                className={styles.logoImg}
-                width={1612}
-                height={213}
-              />
-            </div>
-            <div className={styles.slogan}>
-              <p>
-                <b>
-                  La mezcla la decide cada cliente, nosotros garantizamos un
-                  gran Long Island
-                </b>
-              </p>
-            </div>
-            <div
-              className={styles.contacto}
-              onClick={() => goToSection("contacto")}
-            >
-              Contáctanos
-            </div>
-          </div>
-          <div className={styles.right}>
-            <div className={styles.puesto}>
-              <p>Andrea Barba</p>
-              <p>Co- Founder</p>
-              <p>VP Planner</p>
-              <p>andrea@longisland.mx </p>
-              <p>5530348016</p>
-            </div>
-            <div className={styles.puesto}>
-              <p> Ignacio Tatto</p>
-              <p> Co-Founder</p>
-              <p>VP Creativo</p>
-              <p>tatto@longisland.mx</p>
-              <p>5543401299</p>
-            </div>
-          </div>
-        </footer>
+        <Footer/>
       </main>
     </>
   );
