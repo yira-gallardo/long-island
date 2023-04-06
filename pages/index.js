@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { useRef } from "react";
 import { Nav } from "@/components/Nav/Nav";
 import { Footer } from "@/components/Footer/Footer";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const serviciosOverlayRef = useRef();
@@ -69,13 +69,19 @@ export default function Home() {
             <source src="/img/header.mp4" type="video/mp4" />
           </video>
           <div className={styles.logo}>
-            <Image
-              src="/img/logo-1.png"
-              alt="island"
-              className={styles.img}
-              width={1612}
-              height={213}
-            />
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 2 }}
+            >
+              <Image
+                src="/img/logo-1.png"
+                alt="island"
+                className={styles.img}
+                width={1612}
+                height={213}
+              />
+            </motion.div>
           </div>
         </section>
         <section className={styles.header} id="header">
@@ -83,39 +89,54 @@ export default function Home() {
             <div className={styles.headerBox}>
               <div className={styles.left}>
                 <div className={styles.text}>
-                  <p>
-                    <b>
-                      Somos una agencia creativa, digital y de marketing que
-                      colabora con clientes de México, Estados Unidos y Canada.
-                    </b>
-                  </p>
-                  <p>
-                    Trabajamos de la mano con empresas que buscan llevar su
-                    marca al siguiente nivel, con un enfoque orientado a
-                    objetivos, crecimiento e impacto en las audiencias.
-                  </p>
-                  <p>
-                    Vemos la comunicación de marca como un todo; desde la
-                    concepción de la estrategia, creatividad y ejecución de la
-                    misma.
-                  </p>
-                  <p>
-                    Long Island, al ser una agencia boutique, brinda servicio
-                    personalizado cuidando los intereses y objetivos de cada uno
-                    de sus clientes. Buscamos relaciones a largo plazo que nos
-                    permitan crecer en conjunto.
-                  </p>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 2 }}
+                  >
+                    <p>
+                      <b>
+                        Somos una agencia creativa, digital y de marketing que
+                        colabora con clientes de México, Estados Unidos y
+                        Canada.
+                      </b>
+                    </p>
+                    <p>
+                      Trabajamos de la mano con empresas que buscan llevar su
+                      marca al siguiente nivel, con un enfoque orientado a
+                      objetivos, crecimiento e impacto en las audiencias.
+                    </p>
+                    <p>
+                      Vemos la comunicación de marca como un todo; desde la
+                      concepción de la estrategia, creatividad y ejecución de la
+                      misma.
+                    </p>
+                    <p>
+                      Long Island, al ser una agencia boutique, brinda servicio
+                      personalizado cuidando los intereses y objetivos de cada
+                      uno de sus clientes. Buscamos relaciones a largo plazo que
+                      nos permitan crecer en conjunto.
+                    </p>
+                  </motion.div>
                 </div>
               </div>
               <div className={styles.right}>
                 <div className={styles.image}>
-                  <Image
-                    src="/img/nosotros.jpg"
-                    alt="island"
-                    className={styles.imageImg}
-                    width={2000}
-                    height={1336}
-                  />
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 2, delay: 0.5 }}
+                  >
+                    <Image
+                      src="/img/nosotros.jpg"
+                      alt="island"
+                      className={styles.imageImg}
+                      width={2000}
+                      height={1336}
+                    />
+                  </motion.div>
                 </div>
               </div>
             </div>
@@ -152,9 +173,16 @@ export default function Home() {
                   onMouseOver={() => serviciosHoverInHandler("1")}
                   onMouseLeave={() => serviciosHoverOutHandler("1")}
                 >
-                  <Link href="/creativo" className={styles.link}>
-                    Creatividad
-                  </Link>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                  >
+                    <Link href="/creatividad" className={styles.link}>
+                      Creatividad
+                    </Link>
+                  </motion.div>
                 </div>
                 <br></br>
                 <div
@@ -162,9 +190,16 @@ export default function Home() {
                   onMouseOver={() => serviciosHoverInHandler("2")}
                   onMouseLeave={() => serviciosHoverOutHandler("2")}
                 >
-                  <Link href="/identidad" className={styles.link}>
-                    Identidad de marca
-                  </Link>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 0.2 }}
+                  >
+                    <Link href="/identidad" className={styles.link}>
+                      Identidad de marca
+                    </Link>
+                  </motion.div>
                 </div>
                 <br></br>
                 <div
@@ -172,9 +207,16 @@ export default function Home() {
                   onMouseOver={() => serviciosHoverInHandler("3")}
                   onMouseLeave={() => serviciosHoverOutHandler("3")}
                 >
-                  <Link href="/artes" className={styles.link}>
-                    Artes finales y adaptaciones
-                  </Link>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 0.4 }}
+                  >
+                    <Link href="/artes" className={styles.link}>
+                      Artes finales y adaptaciones
+                    </Link>
+                  </motion.div>
                 </div>
                 <br></br>
                 <div
@@ -182,9 +224,16 @@ export default function Home() {
                   onMouseOver={() => serviciosHoverInHandler("4")}
                   onMouseLeave={() => serviciosHoverOutHandler("4")}
                 >
-                  <Link href="/paginas" className={styles.link}>
-                    Páginas web
-                  </Link>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 0.6 }}
+                  >
+                    <Link href="/paginas" className={styles.link}>
+                      Páginas web
+                    </Link>
+                  </motion.div>
                 </div>
                 <br></br>
                 <div
@@ -192,9 +241,16 @@ export default function Home() {
                   onMouseOver={() => serviciosHoverInHandler("5")}
                   onMouseLeave={() => serviciosHoverOutHandler("5")}
                 >
-                  <Link href="/eventos" className={styles.link}>
-                    Eventos Multimedia
-                  </Link>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 0.8 }}
+                  >
+                    <Link href="/eventos" className={styles.link}>
+                      Eventos Multimedia
+                    </Link>
+                  </motion.div>
                 </div>
                 <br></br>
                 <div
@@ -202,9 +258,16 @@ export default function Home() {
                   onMouseOver={() => serviciosHoverInHandler("6")}
                   onMouseLeave={() => serviciosHoverOutHandler("6")}
                 >
-                  <Link href="/planificacion" className={styles.link}>
-                    Planificación y compra de medios offline y online
-                  </Link>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 1 }}
+                  >
+                    <Link href="/planificacion" className={styles.link}>
+                      Planificación y compra de medios offline y online
+                    </Link>
+                  </motion.div>
                 </div>
               </div>
             </div>
@@ -217,184 +280,324 @@ export default function Home() {
             </div>
             <div className={styles.clientes}>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-1.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1 }}
+                >
+                  <Image
+                    src="/img/client-1.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-2.svg.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.1 }}
+                >
+                  <Image
+                    src="/img/client-2.svg.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-3.svg.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                >
+                  <Image
+                    src="/img/client-3.svg.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-4.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.3 }}
+                >
+                  <Image
+                    src="/img/client-4.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-5.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.4 }}
+                >
+                  <Image
+                    src="/img/client-5.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-6.svg.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                >
+                  <Image
+                    src="/img/client-6.svg.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-7.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.6 }}
+                >
+                  <Image
+                    src="/img/client-7.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-8.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.7 }}
+                >
+                  <Image
+                    src="/img/client-8.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-9.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1 }}
+                >
+                  <Image
+                    src="/img/client-9.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-10.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.1 }}
+                >
+                  <Image
+                    src="/img/client-10.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-11.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                >
+                  <Image
+                    src="/img/client-11.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-12.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.3 }}
+                >
+                  <Image
+                    src="/img/client-12.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-13.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.4 }}
+                >
+                  <Image
+                    src="/img/client-13.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-14.svg.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                >
+                  <Image
+                    src="/img/client-14.svg.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-15.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.6 }}
+                >
+                  <Image
+                    src="/img/client-15.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-16.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.7 }}
+                >
+                  <Image
+                    src="/img/client-16.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-17.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.8 }}
+                >
+                  <Image
+                    src="/img/client-17.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-18.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.9 }}
+                >
+                  <Image
+                    src="/img/client-18.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-19.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 1 }}
+                >
+                  <Image
+                    src="/img/client-19.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
               <div className={styles.cliente}>
-                <Image
-                  src="/img/client-20.jpg"
-                  alt="island"
-                  className={styles.logoImg}
-                  width={1000}
-                  height={600}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 1.2 }}
+                >
+                  <Image
+                    src="/img/client-20.jpg"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1000}
+                    height={600}
+                  />
+                </motion.div>
               </div>
             </div>
           </div>
@@ -403,13 +606,20 @@ export default function Home() {
           <div className="container">
             <div className={styles.contactanos}>
               <div className={styles.left}>
-                <Image
-                  src="/img/fondo-contacto.png"
-                  alt="Platicanos tu idea"
-                  className={styles.img}
-                  width={1921}
-                  height={2567}
-                />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                >
+                  <Image
+                    src="/img/fondo-contacto.png"
+                    alt="Platicanos tu idea"
+                    className={styles.img}
+                    width={1921}
+                    height={2567}
+                  />
+                </motion.div>
               </div>
               <div className={styles.right}>
                 <div className={styles.title}>
@@ -428,7 +638,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <Footer/>
+        <Footer />
       </main>
     </>
   );

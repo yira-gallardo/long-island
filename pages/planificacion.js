@@ -2,6 +2,8 @@ import Head from "next/head";
 import styles from "@/styles/Planificacion.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { Nav } from "@/components/Nav/Nav";
+import { motion } from "framer-motion";
 
 export default function Planificacion() {
   const goToSection = (id) => {
@@ -16,57 +18,25 @@ export default function Planificacion() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <nav className={styles.navDesktop}>
-          <div className={styles.flex}>
-            <div className={styles.left}>
-              <Link href="/">
-                <div className={styles.logo}>
-                  <Image
-                    src="/img/logo_2.png"
-                    alt="island"
-                    className={styles.logoImg}
-                    width={1612}
-                    height={213}
-                  />
-                </div>
-              </Link>
-            </div>
-            <div className={styles.right}>
-              <div
-                className={styles.link}
-                onClick={() => goToSection("header")}
-              >
-                NOSOTROS
+        <Nav />
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          <div className={styles.planificacion}>
+            <div className="container">
+              <div className={styles.title}>
+                <h2>Planificación y compra de medios offline y online</h2>
               </div>
-              <div
-                className={styles.link}
-                onClick={() => goToSection("servicios")}
-              >
-                SERVICIOS
-              </div>
-              <div className={styles.link} onClick={() => goToSection("home")}>
-                NUESTRO CAMINO
-              </div>
-              <div
-                className={styles.link}
-                onClick={() => goToSection("contacto")}
-              >
-                CONTÁCTANOS
+              <div className={styles.subtitle}>
+                Proponemos el mix de medios offline y online ideal para impactar
+                al target potencial de tu marca.
               </div>
             </div>
           </div>
-        </nav>
-        <div className={styles.planificacion}>
-          <div className="container">
-            <div className={styles.title}>
-              <h2>Planificación y compra de medios offline y online</h2>
-            </div>
-            <div className={styles.subtitle}>
-              Proponemos el mix de medios offline y online ideal para impactar
-              al target potencial de tu marca.
-            </div>
-          </div>
-        </div>
+        </motion.div>
       </main>
       <footer className={styles.footer}>
         <div className={styles.left}>
