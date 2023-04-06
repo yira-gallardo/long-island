@@ -32,18 +32,21 @@
   font-size: 1.2em;
   cursor: pointer;
 }
-.creatividad .title {
+.content {
+  background-color: white;
+}
+.content .title {
   font-size: 2em;
   padding-top: 100px;
   color: #222;
 }
-.creatividad .subtitle {
+.content .subtitle {
   font-size: 1.5em;
   padding-top: 30px;
   padding-bottom: 30px;
   color: #222;
 }
-.creatividad .text p {
+.content .text p {
   font-size: 1.2em;
 }
 .footer {

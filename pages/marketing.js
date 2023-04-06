@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/Marketing.module.css";
+import { Header } from "@/components/Header/Header";
 
 export default function Marketing() {
   return (
@@ -10,6 +11,7 @@ export default function Marketing() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
       <main>
         <div className={styles.marketing}>
           <div className="container">

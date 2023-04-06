@@ -3,6 +3,9 @@
   justify-content: space-between;
   padding: 40px;
 }
+.footer .left {
+  width: 400px;
+}
 .footer .right {
   text-align: right;
   display: flex;
@@ -20,7 +23,8 @@
   height: auto;
 }
 .footer .slogan {
-  font-size: 1.2em;
+  font-size: 20px;
+  text-transform: uppercase;
   font-family: "Oswald", sans-serif;
 }
 .footer .puesto {
@@ -29,8 +33,11 @@
   font-family: "Oswald", sans-serif;
   padding-top: 30px;
 }
-footer .contacto {
+.footer .contacto {
   font-size: 1.5em;
   font-family: "Oswald", sans-serif;
   cursor: pointer;
+}
+.footer .right p {
+  margin: 0;
 }
