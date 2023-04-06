@@ -1,11 +1,11 @@
 import Head from "next/head";
-import styles from "@/styles/Eventos.module.css";
+import styles from "@/styles/Creatividad.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { Nav } from "@/components/Nav/Nav";
 import { motion } from "framer-motion";
 
-export default function Eventos() {
+export default function Creatividad() {
   return (
     <>
       <Head>
@@ -22,18 +22,21 @@ export default function Eventos() {
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <div className={styles.eventos}>
+          <div className={styles.creatividad}>
             <div className="container">
               <div className={styles.title}>
-                <h2>Eventos</h2>
+                <h2>Creatividad</h2>
               </div>
               <div className={styles.subtitle}>
-                Desde un stand hasta un evento en diferentes ciudades. Nosotros
-                te apoyamos con el concepto, logística y montaje.
+                Partimos de los objetivos de nuestros clientes, creando
+                estrategias personalizadas, inyectando creatividad para generar
+                campañas de impacto que conecten con sus audiencias.
               </div>
               <div className={styles.text}>
-                <p>- Stands</p>
-                <p>- Realización y logística de eventos</p>
+                <p>- Campañas creativas</p>
+                <p>- Master Graphics</p>
+                <p>- Materiales POP, digitales e impresos</p>
+                <p>- Estrategias y creatividad en punto de venta</p>
               </div>
             </div>
           </div>

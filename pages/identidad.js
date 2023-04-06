@@ -1,7 +1,8 @@
 import Head from "next/head";
 import styles from "@/styles/Identidad.module.css";
-import Link from "next/link";
 import Image from "next/image";
+import { Nav } from "@/components/Nav/Nav";
+import { motion } from "framer-motion";
 
 export default function Identidad() {
   return (
@@ -13,64 +14,33 @@ export default function Identidad() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <nav className={styles.navDesktop}>
-          <div className={styles.flex}>
-            <div className={styles.left}>
-              <Link href="/">
-                <div className={styles.logo}>
-                  <Image
-                    src="/img/logo_2.png"
-                    alt="island"
-                    className={styles.logoImg}
-                    width={1612}
-                    height={213}
-                  />
-                </div>
-              </Link>
-            </div>
-            <div className={styles.right}>
-              <div
-                className={styles.link}
-                onClick={() => goToSection("header")}
-              >
-                NOSOTROS
+        <Nav />
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          <div className={styles.identidad}>
+            <div className="container">
+              <div className={styles.title}>
+                <h2>Identidad de marca</h2>
               </div>
-              <div
-                className={styles.link}
-                onClick={() => goToSection("servicios")}
-              >
-                SERVICIOS
+              <div className={styles.subtitle}>
+                Transmitimos la personalidad y esencia que hace única a tu
+                marca.
               </div>
-              <div className={styles.link} onClick={() => goToSection("home")}>
-                NUESTRO CAMINO
-              </div>
-              <div
-                className={styles.link}
-                onClick={() => goToSection("contacto")}
-              >
-                CONTÁCTANOS
+              <div className={styles.text}>
+                <p>- Logo</p>
+                <p>- Branding</p>
+                <p>- Estrategia e identidad de marca</p>
+                <p>- Brandbooka</p>
+                <p>- Imagen corporativa</p>
+                <p>- Empaques</p>
               </div>
             </div>
           </div>
-        </nav>
-        <div className={styles.identidad}>
-          <div className="container">
-            <div className={styles.title}>
-              <h2>Identidad de marca</h2>
-            </div>
-            <div className={styles.subtitle}>
-              Transmitimos la personalidad y esencia que hace única a tu marca.
-            </div>
-            <div className={styles.text}>
-              <p>- Logo</p>
-              <p>- Branding</p>
-              <p>- Estrategia e identidad de marca</p>
-              <p>- Brandbooka</p>
-              <p>- Imagen corporativa</p>
-              <p>- Empaques</p>
-            </div>
-          </div>
-        </div>
+        </motion.div>
       </main>
       <footer className={styles.footer}>
         <div className={styles.left}>
