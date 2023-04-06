@@ -13,7 +13,7 @@ export const Footer = () => {
       <div className={styles.left}>
         <div className={styles.logo}>
           <Image
-            src="/img/logo_2.png"
+            src="/img/logo-2.png"
             alt="island"
             className={styles.logoImg}
             width={1612}
@@ -28,23 +28,21 @@ export const Footer = () => {
             </b>
           </p>
         </div>
-        <div
-          className={styles.contacto}
-          onClick={() => goToSection("contacto")}
-        >
-          Contáctanos
-        </div>
       </div>
       <div className={styles.right}>
         <div className={styles.puesto}>
-          <p>Andrea Barba</p>
+          <p>
+            <b>Andrea Barba</b>
+          </p>
           <p>Co- Founder</p>
           <p>VP Planner</p>
           <p>andrea@longisland.mx </p>
           <p>5530348016</p>
         </div>
         <div className={styles.puesto}>
-          <p> Ignacio Tatto</p>
+          <p>
+            <b>Ignacio Tatto</b>
+          </p>
           <p> Co-Founder</p>
           <p>VP Creativo</p>
           <p>tatto@longisland.mx</p>

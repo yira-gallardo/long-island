@@ -24,7 +24,7 @@ export const Nav = () => {
             <Link href="/">
               <div className={styles.logo}>
                 <Image
-                  src="/img/logo_2.png"
+                  src="/img/logo-2.png"
                   alt="island"
                   className={styles.logoImg}
                   width={1612}
@@ -64,7 +64,7 @@ export const Nav = () => {
             <Link href="/">
               <div className={styles.logo}>
                 <Image
-                  src="/img/logo_2.png"
+                  src="/img/logo-2.png"
                   alt="island"
                   className={styles.logoImg}
                   width={1612}
