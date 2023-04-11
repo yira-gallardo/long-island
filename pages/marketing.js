@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "@/styles/Marketing.module.css";
+import styles from "@/styles/Subpagina.module.css";
 import { Header } from "@/components/Header/Header";
 
 export default function Marketing() {

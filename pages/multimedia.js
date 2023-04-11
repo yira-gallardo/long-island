@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "@/styles/Multimedia.module.css";
+import styles from "@/styles/Subpagina.module.css";
 import { Header } from "@/components/Header/Header";
 
 export default function Multimedia() {
