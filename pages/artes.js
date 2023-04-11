@@ -24,7 +24,7 @@ export default function Artes() {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <div className={styles.content}>
-            <div className="container">
+            <div className={styles.left} style={{ height: "500px;" }}>
               <div className={styles.title}>
                 <h2>Artes finales y adaptaciones</h2>
               </div>
@@ -32,6 +32,13 @@ export default function Artes() {
                 Trabajamos de la mano con otras agencias y clientes. Nos
                 especializamos en volúmenes altos de entregables sin sacrificar
                 la calidad.
+              </div>
+            </div>
+            <div className={styles.right}>
+              <div className={styles.video}>
+                <video autoPlay muted>
+                  <source src="/img/digital.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
           </div>

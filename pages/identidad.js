@@ -25,7 +25,7 @@ export default function Identidad() {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <div className={styles.content}>
-            <div className="container">
+            <div className={styles.left} style={{ height: "600px;" }}>
               <div className={styles.title}>
                 <h2>Identidad de marca</h2>
               </div>
@@ -40,6 +40,13 @@ export default function Identidad() {
                 <p>- Brandbooka</p>
                 <p>- Imagen corporativa</p>
                 <p>- Empaques</p>
+              </div>
+            </div>
+            <div className={styles.right}>
+              <div className={styles.video}>
+                <video autoPlay muted>
+                  <source src="/img/identidad.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
           </div>

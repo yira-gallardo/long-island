@@ -24,7 +24,7 @@ export default function Eventos() {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <div className={styles.content}>
-            <div className="container">
+            <div className={styles.left} style={{ height: "500px;" }}>
               <div className={styles.title}>
                 <h2>Eventos</h2>
               </div>
@@ -35,6 +35,13 @@ export default function Eventos() {
               <div className={styles.text}>
                 <p>- Stands</p>
                 <p>- Realización y logística de eventos</p>
+              </div>
+            </div>
+            <div className={styles.right}>
+              <div className={styles.video}>
+                <video autoPlay muted>
+                  <source src="/img/eventos.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
           </div>

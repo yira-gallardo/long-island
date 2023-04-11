@@ -24,7 +24,7 @@ export default function Creatividad() {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <div className={styles.content}>
-            <div className="container">
+            <div className={styles.left} style={{ height: "600px;" }}>
               <div className={styles.title}>
                 <h2>Creatividad</h2>
               </div>
@@ -38,6 +38,13 @@ export default function Creatividad() {
                 <p>- Master Graphics</p>
                 <p>- Materiales POP, digitales e impresos</p>
                 <p>- Estrategias y creatividad en punto de venta</p>
+              </div>
+            </div>
+            <div className={styles.right}>
+              <div className={styles.video}>
+                <video autoPlay muted>
+                  <source src="/img/header.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
           </div>
