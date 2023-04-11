@@ -34,6 +34,9 @@ export const Nav = () => {
             </Link>
           </div>
           <div className={styles.right}>
+            <Link href="/" className={styles.link}>
+              INICIO
+            </Link>
             <div className={styles.link} onClick={() => goToSection("header")}>
               NOSOTROS
             </div>
@@ -74,6 +77,9 @@ export const Nav = () => {
             </Link>
           </div>
           <div className={styles.right}>
+            <Link href="/" className={styles.link}>
+              INICIO
+            </Link>
             <Link href="/#header" className={styles.link}>
               NOSOTROS
             </Link>
