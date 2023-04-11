@@ -24,6 +24,7 @@
   height: auto;
 }
 .navDesktop .link {
+  position: relative;
   font-family: "Oswald", sans-serif;
   font-weight: 900;
   display: inline-block;
@@ -31,4 +32,36 @@
   padding: 0 20px;
   font-size: 1.2em;
   cursor: pointer;
+}
+.navDesktop .link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: -2px;
+  left: 0;
+  background-color: yellow;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.navDesktop .link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navDesktop .link:nth-child(1):after {
+  background-color: #57236c;
+}
+.navDesktop .link:nth-child(2):after {
+  background-color: #dc3d61;
+}
+.navDesktop .link:nth-child(3):after {
+  background-color: #f0b357;
+}
+.navDesktop .link:nth-child(4):after {
+  background-color: #a8ce7c;
+}
+.navDesktop .link:nth-child(5):after {
+  background-color: #3675b5;
 }
