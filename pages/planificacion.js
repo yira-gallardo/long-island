@@ -24,13 +24,20 @@ export default function Planificacion() {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <div className={styles.content}>
-            <div className="container">
+            <div className={styles.left} style={{ height: "500px;" }}>
               <div className={styles.title}>
                 <h2>Planificación y compra de medios offline y online</h2>
               </div>
               <div className={styles.subtitle}>
                 Proponemos el mix de medios offline y online ideal para impactar
                 al target potencial de tu marca.
+              </div>
+            </div>
+            <div className={styles.right}>
+              <div className={styles.video}>
+                <video autoPlay muted>
+                  <source src="/img/multimedia.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
           </div>
