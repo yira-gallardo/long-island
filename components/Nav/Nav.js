@@ -35,25 +35,25 @@ export const Nav = () => {
           </div>
           <div className={styles.right}>
             <Link href="/" className={styles.link}>
-              INICIO
+              Inicio
             </Link>
             <div className={styles.link} onClick={() => goToSection("header")}>
-              NOSOTROS
+              Nosotros
             </div>
             <div
               className={styles.link}
               onClick={() => goToSection("servicios")}
             >
-              SERVICIOS
+              Servicios
             </div>
             <div className={styles.link} onClick={() => goToSection("home")}>
-              NUESTRO CAMINO
+              Nuestro Camino
             </div>
             <div
               className={styles.link}
               onClick={() => goToSection("contacto")}
             >
-              CONTÁCTANOS
+              Contáctanos
             </div>
           </div>
         </div>
@@ -78,19 +78,19 @@ export const Nav = () => {
           </div>
           <div className={styles.right}>
             <Link href="/" className={styles.link}>
-              INICIO
+              Inicio
             </Link>
             <Link href="/#header" className={styles.link}>
-              NOSOTROS
+              Nosotros
             </Link>
             <Link href="/#servicios" className={styles.link}>
-              SERVICIOS
+              Servicios
             </Link>
             <Link href="/#home" className={styles.link}>
-              NUESTRO CAMINO
+              Nuestro Camino
             </Link>
             <Link href="/#contacto" className={styles.link}>
-              CONTÁCTANOS
+              Contáctanos
             </Link>
           </div>
         </div>

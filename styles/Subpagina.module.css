@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   padding: 0 20px;
-  color: #222;
+  color: #212427;
   background-color: white;
   z-index: 999;
 }
@@ -33,8 +33,26 @@
   cursor: pointer;
 }
 
+.title {
+  margin: 20px 0;
+}
+.title h2 {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+.title .divider {
+  margin: 10px 0;
+}
+.title .divider .line {
+  display: inline-block;
+  background-color: #212427;
+  width: 30px;
+  height: 6px;
+}
+
 .content {
-  background-color: white;
+  background-color: #f0f0f0;
   display: flex;
   overflow: hidden;
   position: relative;
@@ -46,15 +64,9 @@
 .content .right {
   width: 50%;
 }
-.content .title {
-  font-size: 2em;
-  color: #222;
-}
-.content .subtitle {
-  font-size: 1.5em;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  color: #222;
+.content .text {
+  font-size: 18px;
+  color: #212427;
 }
 .content .text p {
   font-size: 1.2em;
@@ -67,42 +79,15 @@
   width: 100%;
 }
 
-.footer {
-  display: flex;
-  justify-content: space-between;
+.carousel {
   padding: 40px;
+  text-align: center;
+  color: #212427;
 }
-.footer .right {
-  text-align: right;
+.carousel .items {
   display: flex;
-  column-gap: 10px;
 }
-.footer .right .puesto {
-  padding: 20px;
-}
-.footer .logo {
-  width: 200px;
-  position: relative;
-}
-.footer .logoImg {
+.carousel .item .img {
   width: 100%;
   height: auto;
-}
-.footer .slogan {
-  font-size: 1.2em;
-  font-family: "Oswald", sans-serif;
-  color: #222;
-}
-.footer .puesto {
-  text-align: right;
-  font-size: 1.2em;
-  font-family: "Oswald", sans-serif;
-  padding-top: 30px;
-  color: #222;
-}
-footer .contacto {
-  font-size: 1.5em;
-  font-family: "Oswald", sans-serif;
-  cursor: pointer;
-  color: #222;
 }

@@ -1,20 +1,36 @@
 .whatsApp {
   position: fixed;
   top: 120px;
-  right: 20px;
+  right: 40px;
   background-color: #25d366;
   z-index: 999;
-  padding: 10px;
   border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .whatsApp svg {
   fill: white;
 }
+
 .title {
   margin: 20px 0;
 }
-.title h3 {
+.title h2 {
   font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+.title .divider {
+  margin: 10px 0;
+}
+.title .divider .line {
+  display: inline-block;
+  background-color: #212427;
+  width: 30px;
+  height: 6px;
 }
 
 .video {
@@ -41,6 +57,12 @@
 .header {
   background-color: white;
 }
+.header h3 {
+  font-size: 24px;
+}
+.header p {
+  font-size: 16px;
+}
 .header .headerBox {
   display: flex;
   justify-content: center;
@@ -52,7 +74,7 @@
   padding-bottom: 40px;
 }
 .header .text {
-  color: #222;
+  color: #212427;
   margin: 20px 0;
   font-size: 1.2em;
 }
@@ -72,7 +94,14 @@
 .servicios {
   position: relative;
   padding: 250px 0 150px 0;
-  background-color: black;
+  background-color: #212427;
+}
+.servicios .logo {
+  width: 250px;
+}
+.servicios .logo .img {
+  width: 100%;
+  height: auto;
 }
 .servicios .bg {
   position: absolute;
@@ -96,7 +125,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 2;
   transition-duration: 0.2s;
 }
@@ -138,17 +167,15 @@
   display: block;
 }
 .servicios .link {
-  font-family: "Oswald", sans-serif;
-  padding: 0;
-  margin: 0;
-  font-size: 40px;
+  font-family: "Schibsted Grotesk", sans-serif;
+  color: white;
+  font-size: 34px;
+  line-height: 50px;
+  transition-duration: 0.2s;
 }
-.servicios br {
-  display: block;
-  height: 0;
-  padding: 0;
-  margin: 0;
-  font-size: 0;
+.servicios .link:hover {
+  opacity: 0.5;
+  transition-duration: 0.2s;
 }
 
 .home {
@@ -165,7 +192,7 @@
 }
 
 .contacto {
-  background-color: #eee;
+  background-color: #f0f0f0;
 }
 .contactanos {
   display: flex;
@@ -175,12 +202,7 @@
 }
 .contactanos .right {
   width: 50%;
-  padding: 40px;
-}
-.contactanos label {
-  font-size: 2rem;
-  font-family: "Oswald", sans-serif;
-  font-weight: 600;
+  padding: 60px;
 }
 .contactanos input {
   display: block;
@@ -189,25 +211,26 @@
   border: none;
   margin-bottom: 2px;
   text-align: left;
-  color: red;
+  color: #212427;
 }
 .contactanos label {
   display: block;
-  color: black;
-  font-size: 1em;
-  text-transform: uppercase;
+  color: #212427;
+  font-size: 16px;
   margin-bottom: 4px;
 }
 .contactanos input {
   width: 100%;
-  border: 1px solid #222;
+  border: 1px solid #aaa;
   padding: 10px;
+  margin-bottom: 20px;
 }
 .contactanos textarea {
   width: 100%;
-  border: 1px solid #222;
+  border: 1px solid #aaa;
   padding: 10px;
   height: 200px;
+  margin-bottom: 20px;
 }
 .contactanos .left img {
   width: 100%;
@@ -217,51 +240,12 @@
   font-family: "Oswald", sans-serif;
   width: 100%;
   margin: 10px 0;
-  background-color: black;
+  background-color: #212427;
   color: white;
   font-weight: 600;
   text-align: center;
   border: none;
   font-size: 1.2rem;
   padding: 10px;
-  cursor: pointer;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 40px;
-}
-.footer .left {
-}
-.footer .right {
-  text-align: right;
-  display: flex;
-  column-gap: 10px;
-}
-.footer .right .puesto {
-  padding: 20px;
-}
-.footer .logo {
-  width: 200px;
-  position: relative;
-}
-.footer .logoImg {
-  width: 100%;
-  height: auto;
-}
-.footer .slogan {
-  font-size: 1.2em;
-  font-family: "Oswald", sans-serif;
-}
-.footer .puesto {
-  text-align: right;
-  font-size: 1.2em;
-  font-family: "Oswald", sans-serif;
-  padding-top: 30px;
-}
-footer .contacto {
-  font-size: 1.5em;
-  font-family: "Oswald", sans-serif;
   cursor: pointer;
 }

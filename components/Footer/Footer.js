@@ -24,7 +24,7 @@ export const Footer = () => {
           <p>
             <b>
               La mezcla la decide cada cliente, nosotros garantizamos un gran
-              Long Island
+              Long Island.
             </b>
           </p>
         </div>
@@ -37,7 +37,7 @@ export const Footer = () => {
           <p>Co- Founder</p>
           <p>VP Planner</p>
           <p>andrea@longisland.mx </p>
-          <p>5530348016</p>
+          <p>55-3034-8016</p>
         </div>
         <div className={styles.puesto}>
           <p>
@@ -46,7 +46,7 @@ export const Footer = () => {
           <p> Co-Founder</p>
           <p>VP Creativo</p>
           <p>tatto@longisland.mx</p>
-          <p>5543401299</p>
+          <p>55-4340-1299</p>
         </div>
       </div>
     </footer>
