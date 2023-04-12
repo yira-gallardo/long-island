@@ -55,8 +55,8 @@ export default function Home() {
           <a href="https://wa.me/525530348016" target="_blank" rel="noreferrer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="45"
-              height="45"
+              width="34"
+              height="34"
               fill="currentColor"
               viewBox="0 0 16 16"
             >
@@ -76,13 +76,18 @@ export default function Home() {
                     viewport={{ once: true }}
                     transition={{ duration: 2 }}
                   >
-                    <p>
-                      <b>
-                        Somos una agencia creativa, digital y de marketing que
-                        colabora con clientes de México, Estados Unidos y
-                        Canada.
-                      </b>
-                    </p>
+                    <h3>
+                      Somos una agencia creativa, digital y de marketing que
+                      colabora con clientes de México, Estados Unidos y Canada.
+                    </h3>
+                    <div className={styles.title}>
+                      <div className={styles.divider}>
+                        <div className={styles.line} />
+                        <div className={styles.line} />
+                        <div className={styles.line} />
+                        <div className={styles.line} />
+                      </div>
+                    </div>
                     <p>
                       Trabajamos de la mano con empresas que buscan llevar su
                       marca al siguiente nivel, con un enfoque orientado a
@@ -149,6 +154,29 @@ export default function Home() {
           <div className={styles.content}>
             <div className="container">
               <div className={styles.text}>
+                <div className={styles.logo}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 2 }}
+                  >
+                    <Image
+                      src="/img/logo-1.png"
+                      alt="island"
+                      className={styles.img}
+                      width={1612}
+                      height={213}
+                    />
+                  </motion.div>
+                </div>
+                <div className={styles.title}>
+                  <div className={styles.divider}>
+                    <div className={styles.line} />
+                    <div className={styles.line} />
+                    <div className={styles.line} />
+                    <div className={styles.line} />
+                  </div>
+                </div>
                 <div
                   className={styles.servicio}
                   onMouseOver={() => serviciosHoverInHandler("1")}
@@ -165,7 +193,6 @@ export default function Home() {
                     </Link>
                   </motion.div>
                 </div>
-
                 <div
                   className={styles.servicio}
                   onMouseOver={() => serviciosHoverInHandler("2")}
@@ -182,7 +209,6 @@ export default function Home() {
                     </Link>
                   </motion.div>
                 </div>
-
                 <div
                   className={styles.servicio}
                   onMouseOver={() => serviciosHoverInHandler("3")}
@@ -199,7 +225,6 @@ export default function Home() {
                     </Link>
                   </motion.div>
                 </div>
-
                 <div
                   className={styles.servicio}
                   onMouseOver={() => serviciosHoverInHandler("4")}
@@ -216,7 +241,6 @@ export default function Home() {
                     </Link>
                   </motion.div>
                 </div>
-
                 <div
                   className={styles.servicio}
                   onMouseOver={() => serviciosHoverInHandler("5")}
@@ -233,7 +257,6 @@ export default function Home() {
                     </Link>
                   </motion.div>
                 </div>
-
                 <div
                   className={styles.servicio}
                   onMouseOver={() => serviciosHoverInHandler("6")}
@@ -257,7 +280,13 @@ export default function Home() {
         <section className={styles.home} id="home">
           <div className="container">
             <div className={styles.title}>
-              <h3>NUESTRO CAMINO</h3>
+              <h2>Nuestro Camino</h2>
+              <div className={styles.divider}>
+                <div className={styles.line} />
+                <div className={styles.line} />
+                <div className={styles.line} />
+                <div className={styles.line} />
+              </div>
             </div>
             <div className={styles.clientes}>
               <div className={styles.cliente}>
@@ -604,7 +633,13 @@ export default function Home() {
               </div>
               <div className={styles.right}>
                 <div className={styles.title}>
-                  <h3>PLATÍCANOS TU IDEA</h3>
+                  <h2>Platícanos tu idea</h2>
+                  <div className={styles.divider}>
+                    <div className={styles.line} />
+                    <div className={styles.line} />
+                    <div className={styles.line} />
+                    <div className={styles.line} />
+                  </div>
                 </div>
                 <div className={styles.form}>
                   <label>Nombre</label>
@@ -613,7 +648,7 @@ export default function Home() {
                   <input type="text" name="name" />
                   <label>Mensaje</label>
                   <textarea></textarea>
-                  <button>ENVIAR</button>
+                  <button>Enviar mensaje</button>
                 </div>
               </div>
             </div>

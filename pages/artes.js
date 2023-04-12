@@ -4,6 +4,9 @@ import { Nav } from "@/components/Nav/Nav";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
 import { motion } from "framer-motion";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import Image from "next/image";
 
 export default function Artes() {
   return (
@@ -27,8 +30,14 @@ export default function Artes() {
             <div className={styles.left} style={{ height: "500px;" }}>
               <div className={styles.title}>
                 <h2>Artes finales y adaptaciones</h2>
+                <div className={styles.divider}>
+                  <div className={styles.line} />
+                  <div className={styles.line} />
+                  <div className={styles.line} />
+                  <div className={styles.line} />
+                </div>
               </div>
-              <div className={styles.subtitle}>
+              <div className={styles.text}>
                 Trabajamos de la mano con otras agencias y clientes. Nos
                 especializamos en volúmenes altos de entregables sin sacrificar
                 la calidad.
@@ -41,6 +50,246 @@ export default function Artes() {
                 </video>
               </div>
             </div>
+          </div>
+          <div className={styles.carousel}>
+            <Carousel
+              autoPlay
+              infiniteLoop
+              interval={2000}
+              showIndicators={false}
+              showStatus={false}
+              showArrows={false}
+              stopOnHover={false}
+            >
+              <div className={styles.items}>
+                <div className={styles.item}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                  >
+                    <Image
+                      src="/img/client-1.jpg"
+                      alt="island"
+                      className={styles.img}
+                      width={1000}
+                      height={600}
+                    />
+                  </motion.div>
+                </div>
+                <div className={styles.item}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                  >
+                    <Image
+                      src="/img/client-1.jpg"
+                      alt="island"
+                      className={styles.img}
+                      width={1000}
+                      height={600}
+                    />
+                  </motion.div>
+                </div>
+                <div className={styles.item}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                  >
+                    <Image
+                      src="/img/client-1.jpg"
+                      alt="island"
+                      className={styles.img}
+                      width={1000}
+                      height={600}
+                    />
+                  </motion.div>
+                </div>
+                <div className={styles.item}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                  >
+                    <Image
+                      src="/img/client-1.jpg"
+                      alt="island"
+                      className={styles.img}
+                      width={1000}
+                      height={600}
+                    />
+                  </motion.div>
+                </div>
+                <div className={styles.item}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                  >
+                    <Image
+                      src="/img/client-1.jpg"
+                      alt="island"
+                      className={styles.img}
+                      width={1000}
+                      height={600}
+                    />
+                  </motion.div>
+                </div>
+                <div className={styles.item}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                  >
+                    <Image
+                      src="/img/client-1.jpg"
+                      alt="island"
+                      className={styles.img}
+                      width={1000}
+                      height={600}
+                    />
+                  </motion.div>
+                </div>
+                <div className={styles.item}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                  >
+                    <Image
+                      src="/img/client-4.jpg"
+                      alt="island"
+                      className={styles.img}
+                      width={1000}
+                      height={600}
+                    />
+                  </motion.div>
+                </div>
+              </div>
+              <div className={styles.items}>
+                <div className={styles.item}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                  >
+                    <Image
+                      src="/img/client-1.jpg"
+                      alt="island"
+                      className={styles.img}
+                      width={1000}
+                      height={600}
+                    />
+                  </motion.div>
+                </div>
+                <div className={styles.item}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                  >
+                    <Image
+                      src="/img/client-1.jpg"
+                      alt="island"
+                      className={styles.img}
+                      width={1000}
+                      height={600}
+                    />
+                  </motion.div>
+                </div>
+                <div className={styles.item}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                  >
+                    <Image
+                      src="/img/client-1.jpg"
+                      alt="island"
+                      className={styles.img}
+                      width={1000}
+                      height={600}
+                    />
+                  </motion.div>
+                </div>
+                <div className={styles.item}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                  >
+                    <Image
+                      src="/img/client-1.jpg"
+                      alt="island"
+                      className={styles.img}
+                      width={1000}
+                      height={600}
+                    />
+                  </motion.div>
+                </div>
+                <div className={styles.item}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                  >
+                    <Image
+                      src="/img/client-1.jpg"
+                      alt="island"
+                      className={styles.img}
+                      width={1000}
+                      height={600}
+                    />
+                  </motion.div>
+                </div>
+                <div className={styles.item}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                  >
+                    <Image
+                      src="/img/client-1.jpg"
+                      alt="island"
+                      className={styles.img}
+                      width={1000}
+                      height={600}
+                    />
+                  </motion.div>
+                </div>
+                <div className={styles.item}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                  >
+                    <Image
+                      src="/img/client-4.jpg"
+                      alt="island"
+                      className={styles.img}
+                      width={1000}
+                      height={600}
+                    />
+                  </motion.div>
+                </div>
+              </div>
+            </Carousel>
           </div>
         </motion.div>
       </main>
