@@ -86,6 +86,7 @@ export default function Home() {
                         <div className={styles.line} />
                         <div className={styles.line} />
                         <div className={styles.line} />
+                        <div className={styles.line} />
                       </div>
                     </div>
                     <p>
@@ -171,6 +172,7 @@ export default function Home() {
                 </div>
                 <div className={styles.title}>
                   <div className={styles.divider}>
+                    <div className={styles.line} />
                     <div className={styles.line} />
                     <div className={styles.line} />
                     <div className={styles.line} />
@@ -282,6 +284,7 @@ export default function Home() {
             <div className={styles.title}>
               <h2>Nuestro Camino</h2>
               <div className={styles.divider}>
+                <div className={styles.line} />
                 <div className={styles.line} />
                 <div className={styles.line} />
                 <div className={styles.line} />
@@ -635,6 +638,7 @@ export default function Home() {
                 <div className={styles.title}>
                   <h2>Platícanos tu idea</h2>
                   <div className={styles.divider}>
+                    <div className={styles.line} />
                     <div className={styles.line} />
                     <div className={styles.line} />
                     <div className={styles.line} />
