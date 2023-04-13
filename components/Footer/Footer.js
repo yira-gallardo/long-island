@@ -36,8 +36,19 @@ export const Footer = () => {
           </p>
           <p>Co- Founder</p>
           <p>VP Planner</p>
-          <p>andrea@longisland.mx </p>
-          <p>55-3034-8016</p>
+          <p>
+            <a
+              href="mailto:andrea@longisland.mx"
+              target="_blank"
+              rel="noreferrer"
+            >
+              andrea@longisland.mx
+            </a>
+          </p>
+
+          <a href="https://wa.me/525530348016" target="_blank" rel="noreferrer">
+            55-3034-8016
+          </a>
         </div>
         <div className={styles.puesto}>
           <p>
@@ -45,8 +56,19 @@ export const Footer = () => {
           </p>
           <p> Co-Founder</p>
           <p>VP Creativo</p>
-          <p>tatto@longisland.mx</p>
-          <p>55-4340-1299</p>
+          <p>
+            <a
+              href="mailto:tatto@longisland.mx"
+              target="_blank"
+              rel="noreferrer"
+            >
+              tatto@longisland.mx
+            </a>
+          </p>
+
+          <a href="https://wa.me/525543401299" target="_blank" rel="noreferrer">
+            55-4340-1299
+          </a>
         </div>
       </div>
     </footer>

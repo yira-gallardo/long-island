@@ -50,7 +50,21 @@
   width: 30px;
   height: 6px;
 }
-
+.title .divider .line:nth-child(1) {
+  background-color: #57236c;
+}
+.title .divider .line:nth-child(2) {
+  background-color: #dc3d61;
+}
+.title .divider .line:nth-child(3) {
+  background-color: #f0b357;
+}
+.title .divider .line:nth-child(4) {
+  background-color: #a8ce7c;
+}
+.title .divider .line:nth-child(5) {
+  background-color: #3675b5;
+}
 .content {
   background-color: #f0f0f0;
   display: flex;
