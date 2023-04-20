@@ -12,7 +12,7 @@ export default function Eventos() {
   return (
     <>
       <Head>
-        <title>Long Island - Creatividad</title>
+        <title>Long Island - Eventos</title>
         <meta name="description" content="Long Island" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -27,7 +27,7 @@ export default function Eventos() {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <div className={styles.content}>
-            <div className={styles.left} style={{ height: "500px;" }}>
+            <div className={styles.left} style={{ minHeight: "500px" }}>
               <div className={styles.title}>
                 <h2>Eventos</h2>
                 <div className={styles.divider}>

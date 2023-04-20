@@ -44,3 +44,23 @@
 .footer .right p {
   margin: 0;
 }
+@media only screen and (max-width: 1000px) {
+  .footer {
+    padding: 0 40px;
+    display: block;
+  }
+  .footer .left {
+    width: 250px;
+    padding-left: 50px;
+    width: 100%;
+  }
+  .footer .right {
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer .right .puesto {
+    display: block;
+    justify-content: space-between;
+  }
+}
