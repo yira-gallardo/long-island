@@ -8,11 +8,11 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 
-export default function Artes() {
+export default function Marketing() {
   return (
     <>
       <Head>
-        <title>Long Island - Artes</title>
+        <title>Long Island - Marketing</title>
         <meta name="description" content="Long Island" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -29,7 +29,7 @@ export default function Artes() {
           <div className={styles.content}>
             <div className={styles.left} style={{ minHeight: "500px" }}>
               <div className={styles.title}>
-                <h2>Artes finales y adaptaciones</h2>
+                <h2>Marketing digital</h2>
                 <div className={styles.divider}>
                   <div className={styles.line} />
                   <div className={styles.line} />
@@ -39,15 +39,26 @@ export default function Artes() {
                 </div>
               </div>
               <div className={styles.text}>
-                Trabajamos de la mano con otras agencias y clientes. Nos
-                especializamos en volúmenes altos de entregables sin sacrificar
-                la calidad.
+                <p>
+                  Creamos el ecosistema digital ideal para tu marca. Nuestra
+                  metodología de trabajo está orientada a objetivos. Estudiamos
+                  cuidadosamente a las audiencias para seleccionar la
+                  comunicación y los canales adecuados.
+                </p>
+                <p>
+                  <ul>
+                    <li>Desarrollo de contenido</li>
+                    <li>Estrategias marketing digital</li>
+                    <li>Campañas en Google As y redes sociales</li>
+                    <li>Programmatic</li>
+                  </ul>
+                </p>
               </div>
             </div>
             <div className={styles.right}>
               <div className={styles.video}>
                 <video autoPlay muted>
-                  <source src="/img/digital.mp4" type="video/mp4" />
+                  <source src="/img/eventos.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>

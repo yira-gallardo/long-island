@@ -27,7 +27,7 @@ export default function Creatividad() {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <div className={styles.content}>
-            <div className={styles.left} style={{ height: "600px;" }}>
+            <div className={styles.left} style={{ minHeight: "500px" }}>
               <div className={styles.title}>
                 <h2>Creatividad</h2>
                 <div className={styles.divider}>
