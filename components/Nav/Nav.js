@@ -2,9 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "@/styles/Nav.module.css";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export const Nav = () => {
   const [route, setRoute] = useState();
+  const [menuActive, setMenuActive] = useState(false); // Para activar menu mobile
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -13,7 +15,7 @@ export const Nav = () => {
   }, []);
 
   const goToSection = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    document.getElementById(id)({ behavior: "smooth" });
   };
 
   if (route === "/") {
@@ -63,6 +65,101 @@ export const Nav = () => {
             </div>
           </div>
         </nav>
+        {!menuActive && (
+          <nav className={styles.navMobile}>
+            <div className={styles.left}>
+              <Link href="/">
+                <div className={styles.logo}>
+                  <Image
+                    src="/img/logo-1.png"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1612}
+                    height={213}
+                  />
+                </div>
+              </Link>
+            </div>
+            <div className={styles.right}>
+              <div
+                className={styles.burger}
+                onClick={() => setMenuActive(true)}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </nav>
+        )}
+        {menuActive && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.25 }}
+          >
+            <div className={styles.menuMobile}>
+              <div
+                className={styles.close}
+                onClick={() => setMenuActive(false)}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                </svg>
+              </div>
+              <Link href="/">
+                <div className={styles.logo}>
+                  <Image
+                    src="/img/logo-1.png"
+                    alt="island"
+                    className={styles.logoImg}
+                    width={1612}
+                    height={213}
+                  />
+                </div>
+              </Link>
+              <div className={styles.link} onClick={() => goToSection("/")}>
+                Inicio
+              </div>
+              <div
+                className={styles.link}
+                onClick={() => goToSection("header")}
+              >
+                Nosotros
+              </div>
+              <div
+                className={styles.link}
+                onClick={() => goToSection("servicios")}
+              >
+                Servicios
+              </div>
+              <div className={styles.link} onClick={() => goToSection("home")}>
+                Nuestro Camino
+              </div>
+              <div
+                className={styles.link}
+                onClick={() => goToSection("contacto")}
+              >
+                Contáctanos
+              </div>
+            </div>
+          </motion.div>
+        )}
         <div className={styles.whatsApp}>
           <a href="https://wa.me/525530348016" target="_blank" rel="noreferrer">
             <svg
@@ -81,7 +178,6 @@ export const Nav = () => {
   } else {
     return (
       <>
-        {" "}
         <nav className={styles.navDesktop}>
           <div className={styles.flex}>
             <div className={styles.left}>
