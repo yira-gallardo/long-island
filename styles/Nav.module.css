@@ -86,5 +86,87 @@
   .navDesktop {
     display: none;
   }
+
+  .navMobile {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 998;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.2s;
+  }
+  .navMobile .left {
+    width: 40%;
+  }
+  .navMobile .center {
+    width: 20%;
+    text-align: center;
+  }
   
+  .navMobile .left .logo {
+    width: 120px;
+  }
+  .navMobile .left .logoImg {
+    width: 100%;
+    height: auto;
+  }
+  .navMobile .burger svg {
+    fill: white;
+  }
+  .navMobile .social {
+    display: inline-block;
+    padding: 0 4px;
+  }
+  .navMobile .social svg {
+    fill: white;
+    transition-duration: 0.2s;
+  }
+  .navMobile .social:hover svg {
+    fill: #20c47d;
+    transition-duration: 0.2s;
+  }
+  .menuMobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+  }
+  .navMobileScrolled {
+    background-color: black;
+    transition-duration: 0.2s;
+  }
+  .menuMobile .logo {
+    width: 250px;
+    margin-bottom: 20px;
+  }
+  .menuMobile .logoImg {
+    width: 100%;
+    height: auto;
+  }
+  .menuMobile .link {
+    font-family: "Manrope", sans-serif;
+    padding: 4px 0;
+    font-size: 1.5em;
+  }
+  .menuMobile .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .menuMobile .close svg {
+    fill: white;
+  }
+
 }
