@@ -4,7 +4,7 @@ import styles from "@/styles/Home.module.css";
 
 export const Header = () => {
   return (
-    <section className={styles.video}>
+    <section className={styles.video} id="top">
       <video autoPlay muted>
         <source src="/img/header.mp4" type="video/mp4" />
       </video>

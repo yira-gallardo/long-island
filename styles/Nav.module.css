@@ -66,6 +66,10 @@
   background-color: #3675b5;
 }
 
+.navMobile {
+  display: none;
+}
+
 .whatsApp {
   position: fixed;
   top: 120px;
@@ -82,6 +86,7 @@
 .whatsApp svg {
   fill: white;
 }
+
 @media only screen and (max-width: 1000px) {
   .navDesktop {
     display: none;
@@ -100,19 +105,17 @@
     transition-duration: 0.2s;
   }
   .navMobile .left {
-    width: 40%;
+    width: 90%;
+    text-align: left;
   }
-  .navMobile .center {
-    width: 20%;
-    text-align: center;
-  }
-  
+
   .navMobile .left .logo {
     width: 120px;
   }
   .navMobile .left .logoImg {
     width: 100%;
     height: auto;
+    text-align: left;
   }
   .navMobile .burger svg {
     fill: white;
@@ -143,10 +146,7 @@
     justify-content: center;
     align-items: center;
   }
-  .navMobileScrolled {
-    background-color: black;
-    transition-duration: 0.2s;
-  }
+
   .menuMobile .logo {
     width: 250px;
     margin-bottom: 20px;
@@ -159,6 +159,8 @@
     font-family: "Manrope", sans-serif;
     padding: 4px 0;
     font-size: 1.5em;
+    cursor: pointer;
+    color: white;
   }
   .menuMobile .close {
     position: absolute;
@@ -168,5 +170,8 @@
   .menuMobile .close svg {
     fill: white;
   }
-
+  .whatsApp {
+    top: 80px;
+    right: 30px;
+  }
 }
