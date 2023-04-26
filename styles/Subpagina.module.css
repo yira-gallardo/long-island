@@ -113,3 +113,42 @@
   position: absolute;
   height: 100%;
 }
+.carouselMobile {
+  display: none;
+}
+@media only screen and (max-width: 1000px) {
+  .navDesktop {
+    display: none;
+  }
+  .content {
+    display: block;
+  }
+  .content .left {
+    width: 100%;
+  }
+  .content .right {
+    width: 100%;
+  }
+  .title {
+    text-align: center;
+  }
+  .videos {
+    display: none;
+  }
+  .carousel {
+    display: none;
+  }
+  .carouselMobile {
+    padding: 40px;
+    text-align: center;
+    color: #212427;
+    display: block;
+  }
+  .carouselMobile .items {
+    display: flex;
+  }
+  .carouselMobile .item .img {
+    width: 100%;
+    height: auto;
+  }
+}
