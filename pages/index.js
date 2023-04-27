@@ -7,6 +7,7 @@ import { Nav } from "@/components/Nav/Nav";
 import { Footer } from "@/components/Footer/Footer";
 import { Header } from "@/components/Header/Header";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 export default function Home() {
   const serviciosOverlayRef = useRef();
@@ -19,6 +20,27 @@ export default function Home() {
   const video6 = useRef();
   const video7 = useRef();
   const video8 = useRef();
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_s90bl01",
+        "template_dicqo7r",
+        form.current,
+        "QRXApDrLGQPRaipq-"
+      )
+      .then(
+        () => {
+          alert("Mensaje enviado");
+        },
+        () => {
+          alert("Un error sucedió, intenta de nuevo");
+        }
+      );
+  };
 
   const serviciosHoverInHandler = (videoRef) => {
     serviciosOverlayRef.current.classList.add(styles.active);
@@ -672,13 +694,15 @@ export default function Home() {
                   </div>
                 </div>
                 <div className={styles.form}>
-                  <label>Nombre</label>
-                  <input type="text" name="name" />
-                  <label>Email</label>
-                  <input type="text" name="name" />
-                  <label>Mensaje</label>
-                  <textarea></textarea>
-                  <button>Enviar mensaje</button>
+                  <form ref={form} onSubmit={sendEmail}>
+                    <label>Nombre</label>
+                    <input type="text" name="nombre" required />
+                    <label>Email</label>
+                    <input type="email" name="email" required />
+                    <label>Mensaje</label>
+                    <textarea name="mensaje" required></textarea>
+                    <button>Enviar mensaje</button>
+                  </form>
                 </div>
               </div>
             </div>
