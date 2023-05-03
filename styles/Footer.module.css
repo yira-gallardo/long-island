@@ -46,20 +46,25 @@
 }
 @media only screen and (max-width: 1000px) {
   .footer {
-    padding: 0 40px;
+    padding: 40px 20px;
+    text-align: center;
     display: block;
+  }
+  .footer .logo {
+    margin: auto;
   }
   .footer .left {
     width: 250px;
-    padding-left: 50px;
+    padding: 0;
     width: 100%;
   }
   .footer .right {
+    display: block;
     text-align: center;
     width: 100%;
   }
-
   .footer .right .puesto {
+    text-align: center;
     display: block;
     justify-content: space-between;
   }
