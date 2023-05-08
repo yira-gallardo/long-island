@@ -26,7 +26,7 @@
 .navDesktop .link {
   position: relative;
   font-family: "Oswald", sans-serif;
-  font-weight: 900;
+
   display: inline-block;
   text-decoration: none;
   font-size: 1.1em;
@@ -103,6 +103,7 @@
     justify-content: center;
     align-items: center;
     transition-duration: 0.2s;
+    background-color: #212427;
   }
   .navMobile .left {
     width: 90%;
@@ -138,7 +139,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: #212427;
     z-index: 999;
     display: flex;
     flex-direction: column;
@@ -172,6 +173,6 @@
   }
   .whatsApp {
     top: 80px;
-    right: 30px;
+    right: 40px;
   }
 }

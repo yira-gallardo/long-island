@@ -6,6 +6,9 @@ import { useRef } from "react";
 import { Nav } from "@/components/Nav/Nav";
 import { Footer } from "@/components/Footer/Footer";
 import { Header } from "@/components/Header/Header";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
@@ -326,6 +329,82 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+        <section className={styles.serviciosMobile}>
+          <Carousel
+            autoPlay
+            infiniteLoop
+            interval={3000}
+            showIndicators={false}
+            showStatus={false}
+            showArrows={false}
+            stopOnHover={false}
+          >
+            <Link href="/creatividad">
+              <div
+                className={styles.servicio}
+                style={{ backgroundImage: "url(/img/servicio-1.jpg)" }}
+              >
+                <h2>Creatividad</h2>
+              </div>
+            </Link>
+            <Link href="/identidad">
+              <div
+                className={styles.servicio}
+                style={{ backgroundImage: "url(/img/servicio-2.jpg)" }}
+              >
+                <h2>Identidad de marca</h2>
+              </div>
+            </Link>
+            <Link href="/artes">
+              <div
+                className={styles.servicio}
+                style={{ backgroundImage: "url(/img/servicio-3.jpg)" }}
+              >
+                <h2>Artes finales y adaptaciones</h2>
+              </div>
+            </Link>
+            <Link href="/paginas">
+              <div
+                className={styles.servicio}
+                style={{ backgroundImage: "url(/img/servicio-4.jpg)" }}
+              >
+                <h2>Páginas web</h2>
+              </div>
+            </Link>
+            <Link href="marketing">
+              <div
+                className={styles.servicio}
+                style={{ backgroundImage: "url(/img/servicio-5.jpg)" }}
+              >
+                <h2>Marketing digital</h2>
+              </div>
+            </Link>
+            <Link href="eventos">
+              <div
+                className={styles.servicio}
+                style={{ backgroundImage: "url(/img/servicio-6.jpg)" }}
+              >
+                <h2>Eventos</h2>
+              </div>
+            </Link>
+            <Link href="multimedia">
+              <div
+                className={styles.servicio}
+                style={{ backgroundImage: "url(/img/servicio-7.jpg)" }}
+              >
+                <h2>Multimedia</h2>
+              </div>
+            </Link>
+            <Link href="planificacion">
+              <div
+                className={styles.servicio}
+                style={{ backgroundImage: "url(/img/servicio-8.jpg)" }}
+              >
+                <h2>Planificación y compra de medios offline y online</h2>
+              </div>
+            </Link>
+          </Carousel>
         </section>
         <section className={styles.home} id="home">
           <div className="container">
