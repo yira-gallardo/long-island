@@ -247,6 +247,28 @@
   padding: 10px;
   cursor: pointer;
 }
+.serviciosMobile {
+  display: none;
+}
+.serviciosMobile .servicio {
+  background-image: url(/img/servicio-1.jpg);
+  background-position: 50% 30%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-left: 20px;
+  padding-bottom: 60px;
+  text-align: left;
+  min-height: 80vh;
+}
+.serviciosMobile .servicio h2 {
+  font-family: "Schibsted Grotesk", sans-serif;
+  color: white;
+  font-size: 43px;
+}
+
 @media only screen and (max-width: 1000px) {
   .video {
     position: relative;
@@ -288,6 +310,7 @@
     padding: 20px;
   }
   .servicios {
+    display: none;
     position: relative;
     padding: 100px 20px;
     background-color: #212427;
@@ -301,6 +324,26 @@
   }
   .servicios .videos {
     display: none;
+  }
+  .serviciosMobile {
+    display: block;
+  }
+  .serviciosMobile .servicio {
+    background-image: url(/img/servicio-1.jpg);
+    background-position: 50% 30%;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-bottom: 60px;
+    text-align: left;
+    min-height: 80vh;
+  }
+  .serviciosMobile .servicio h2 {
+    font-family: "Schibsted Grotesk", sans-serif;
+    color: white;
+    font-size: 43px;
   }
   .contacto {
     background-color: #f0f0f0;

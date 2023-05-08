@@ -48,7 +48,7 @@ export default function Identidad() {
                     <li>Logo</li>
                     <li>Branding</li>
                     <li>Estrategia e identidad de marca</li>
-                    <li> Brandbooka</li>
+                    <li> Brandbook</li>
                     <li>Imagen corporativa</li>
                     <li>Empaques</li>
                   </ul>
